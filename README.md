@@ -1,13 +1,21 @@
 # Network-monitoring-detection (Home cybersecurity lab)
 this is network monitoring lab, using  Ubuntu servers,to stimulate a Hydra attack  in a safe environment.
 
-# host/system specs
-M3 Mac, UTM virtualization apple silicon, Ubuntu ARM64
+## Architecture
+- **Victim VM**: Ubuntu Server 24.04 ARM64, Apache2
+- **Attacker VM**: Ubuntu Server 24.04 ARM64, Hydra, Nmap
+- **Sensor VM**: Ubuntu Server 24.04 ARM64, Suricata, tcpdump
 
+## Hardware/Software
+- Host: Apple M3 Mac
+- Virtualization: UTM
+- Network: 192.168.64.0/24 (Shared Network)
 
-# Lab components
-this lab utilized 3 different servers, [attacker, sensor & victim]  
-- Tools installed: Hydra, Suricata, Nmap, Apache  with ssh connections enabled
+## Tools Used
+- Suricata (IDS/IPS)
+- Hydra (Password cracker)
+- Nmap (Network scanner)
+- Apache2 (Web server)
 
 # Issues 
 - suricata roadblock
@@ -39,11 +47,11 @@ The nmap scan shows what I expected it to show.
 4 - it’s not working again!!!
 5-Nevermind, the password to my victim server was not in the password.txt list I created. That was dumb of me…..STILL DOESN’T WORK. 
 
-# the Remaining issue
-ssh connection refused.
+## Current Status
+Working on SSH brute force detection. Encountering intermittent "connection refused" - investigating SSH rate limiting.
 
 # Author
-LinkedIn: linkedin.com/in/yvan-obama. 
+linkedin.com/in/yvan-obama. 
 Email: yvan.obama@outlook.com
 
 
